@@ -113,5 +113,5 @@ struct UnPrintable(i32);
 struct DebugPrintable(i32);
 ```
 
-customize the output appearance by manually implementing `fmt::Display`, which uses the `{}` print marker.
+customize the output appearance by manually implementing `fmt::Display`, which uses the `{}` print marker.  
 https://doc.rust-lang.org/rust-by-example/hello/print/print_display.html  
