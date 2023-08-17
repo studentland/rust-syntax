@@ -115,3 +115,21 @@ struct DebugPrintable(i32);
 
 customize the output appearance by manually implementing `fmt::Display`, which uses the `{}` print marker.  
 https://doc.rust-lang.org/rust-by-example/hello/print/print_display.html  
+
+### Primitives/types  
+https://doc.rust-lang.org/rust-by-example/primitives.html
+
+### Literals/operators  
+https://doc.rust-lang.org/rust-by-example/primitives/literals.html
+
+`+ - && || !true & | ^ << >> -2.5e-3`
+readability `10_000` is `10000`
+
+### variables
+
+```rust
+let cant_change = 3  
+
+let mut change_me = 4  
+change_me = 5
+```
