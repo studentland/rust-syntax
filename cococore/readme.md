@@ -60,6 +60,8 @@ https://doc.rust-lang.org/rust-by-example/
 
 ## rust syntax
 
+`#![allow(dead_code)]` // no warnings for unused code. Inject at the beginning of the file
+
 `println!` - ends with `!` because it is not common function but macro. The advanced functionality of the rust  
 
 ### incode comments
@@ -160,3 +162,55 @@ struct Point {
     y: f32,
 } // A struct with two fields
 ```
+
+### enums
+
+```rust
+enum WebEvent {
+Move, // unit-like
+Jump,
+// like tuple structs,
+KeyPress(char), //tuple structs
+Paste(String),
+Click { x: i64, y: i64 }, //c-like structures
+}
+
+type WE = WebEvent; // to use short name
+...
+let action = WE::Jump;
+```
+
+`use`
+
+```rust
+enum Status {
+    Rich,
+    Poor,
+}
+
+enum Work {
+    Civilian,
+    Soldier,
+}
+
+use crate::Status::{Poor, Rich}; // manual scoping.
+use crate::Work::*; // auto scoping for each name inside.
+// now can use in code as Rich, Poor, Civilian, Soldier
+```
+
+### constants
+
+```rust
+const cant_change_value: i32 = 10;
+static possibly_mutable_value: &str = "rust"
+```
+
+### variables
+
+```rust
+let mut my_number = 11u8 // can be changed, because of mut
+let mut my_number:u8 = 11 // same as above, but another syntax
+let _avoid_warning_if_not_used = "because name started from underscore"
+let warning_if_not_used = "common behavior"
+```
+
