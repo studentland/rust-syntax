@@ -221,3 +221,8 @@ use `as` keyword to cast into type
 let decimal = 65.4321_f32;
 let integer = decimal as u8
 ```
+
+### convertion
+
+https://doc.rust-lang.org/rust-by-example/conversion/from_into.html  
+
