@@ -140,3 +140,13 @@ let tu = ("a", 3, true); //access by index tu.0; tu.1; tu.2;
 let (one, two, three) = tu // distructing to create bindings
 ```
 
+### arrays
+
+```rust
+let xs: [i32; 5] = [1, 2, 3, 4, 5];
+let ys: [i32; 500] = [0; 123]; // fill x500 elements by 123
+xs[i] // access
+xs.len() // length
+f(&xs[1..4]) // send into function as slice [2,3,4,5]
+```
+
