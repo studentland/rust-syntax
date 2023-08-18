@@ -214,3 +214,10 @@ let _avoid_warning_if_not_used = "because name started from underscore"
 let warning_if_not_used = "common behavior"
 ```
 
+### types
+
+use `as` keyword to cast into type
+```rust
+let decimal = 65.4321_f32;
+let integer = decimal as u8
+```
