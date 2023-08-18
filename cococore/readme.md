@@ -226,3 +226,74 @@ let integer = decimal as u8
 
 https://doc.rust-lang.org/rust-by-example/conversion/from_into.html  
 
+### flow of control
+
+`loop`
+```rust
+if n < 0 && (magic1 || magic2) {} else if n > 0 {} else {}
+'outer:loop{
+  'inner:loop{ // infinite loop can be without label 'inner
+    break 'outer; // stop both loops
+  }
+}
+
+```
+
+Returning from loop  
+https://doc.rust-lang.org/rust-by-example/flow_control/loop/return.html  
+
+`while`
+
+```rust
+while n < 101 {n+=1}
+```
+
+`for`
+
+```rust
+for n in 1..101 {/* 1..100 */}
+for n in 1..=100 {/* 1..100 */}
+let names = vec!["one", "there", "fool"];
+for name in names.iter() {} // after ends, "names" can be printed
+for name in names.into_iter() {}// names can not be printed after end
+for name in names.iter_mut() { // can modify on place, can be printed after end
+  *name = "wonderful"
+}
+```
+
+`match`
+
+```rust
+match number {
+  1 => println!("single case"),
+  2 | 11 => println!("multicase"),
+  13..=19 => println!("[13..19] range"),
+  _ => println!("if nothing fires before"),
+    }
+```
+
+destructing using `match`  
+https://doc.rust-lang.org/rust-by-example/flow_control/match/destructuring.html
+
+`if let`  
+https://doc.rust-lang.org/rust-by-example/flow_control/if_let.html  
+
+`let else`  
+https://doc.rust-lang.org/rust-by-example/flow_control/let_else.html  
+
+### functions
+
+```rust
+// common
+fn my_f(i:u8, s:str) -> (str, bool){}
+// closure
+let closure_annotated = |i: i32| -> i32 { i + outer_var };
+let closure_inferred  = |i     |          i + outer_var  ;
+```
+
+`closure input functions`  
+https://doc.rust-lang.org/rust-by-example/fn/closures/input_functions.html
+
+`closure as output parameters`  
+https://doc.rust-lang.org/rust-by-example/fn/closures/output_parameters.html
+
