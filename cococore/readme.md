@@ -150,3 +150,13 @@ xs.len() // length
 f(&xs[1..4]) // send into function as slice [2,3,4,5]
 ```
 
+### structures
+
+```rust
+struct Unit; //field-less (for generics).
+struct Pair(i32, f32); // A tuple struct
+struct Point {
+    x: f32,
+    y: f32,
+} // A struct with two fields
+```
