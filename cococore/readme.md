@@ -128,8 +128,15 @@ readability `10_000` is `10000`
 ### variables
 
 ```rust
-let cant_change = 3  
+let cant_change = 3;  
 
-let mut change_me = 4  
-change_me = 5
+let mut change_me = 4;  
+change_me = 5;
 ```
+
+### tuples
+```rust
+let tu = ("a", 3, true); //access by index tu.0; tu.1; tu.2;
+let (one, two, three) = tu // distructing to create bindings
+```
+
