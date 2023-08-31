@@ -297,3 +297,10 @@ https://doc.rust-lang.org/rust-by-example/fn/closures/input_functions.html
 `closure as output parameters`  
 https://doc.rust-lang.org/rust-by-example/fn/closures/output_parameters.html
 
+debug print macros `dbg!`  
+```rust
+let x = Some(1);
+dbg!(x); // [src/main.rs:3] x = Some(1)
+let y = dbg!(x.unwrap()) + 6; // x.unwrap() = 1
+dbg!(y); // y = 7
+```
